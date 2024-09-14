@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+       <title>SS ENGINEERING</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                SS <span>ENGINEERING</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                    <a href="/index.html">Home</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                    <a href="/about.html">About</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                    <a href="/project.html" target="_self">Projects</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    <a href="#">Services</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                    <a href="/contact.html">Contact</a>
+                </div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="/index.html"target="_self">Home</a>
+                <a href="/about.html"target="_self">About</a>
+                <a href="/project.html" target="_self">Projects</a>
+                <a href="#"target="_self">Service</a>
+                <a href="/contact.html"target="_self">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="main-bg">
+        <div class="services-container">
+            <h2 class="services-heading">Our Services</h2>
+            <div class="services-list">
+                <div class="services-item">
+                    <img src="/picture/services pictures/electricwork.jpg" alt="Electrical Works" class="service-img">
+                    <h3 class="service-title">All Electrical Works</h3>
+                </div>
+                <div class="services-item">
+                    <img src="/picture/p2.jpeg" alt="Wiring Point" class="service-img">
+                    <h3 class="service-title">Wiring Point</h3>
+                </div>
+                <div class="services-item">
+                    <img src="/picture/services pictures/powersupply.jpg" alt="Power Supply" class="service-img">
+                    <h3 class="service-title">Power Supply</h3>
+                </div>
+                <div class="services-item">
+                    <img src="/picture/services pictures/dbs.jpeg" alt="DBs Installation" class="service-img">
+                    <h3 class="service-title">DBs Installation</h3>
+                </div>
+                <div class="services-item">
+                    <img src="/picture/services pictures/Networking.png" alt="Networking" class="service-img">
+                    <h3 class="service-title">Networking</h3>
+                </div>
+                <div class="services-item">
+                    <img src="/picture/services pictures/acwiring.jpg" alt="AC Wiring" class="service-img">
+                    <h3 class="service-title">AC Wiring</h3>
+                </div>
+                <div class="services-item">
+                    <img src="/picture/services pictures/Lightsinstallation.jpeg" alt="Lights Installation" class="service-img">
+                    <h3 class="service-title">Lights Installation</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
