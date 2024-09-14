@@ -12,14 +12,9 @@ function cancel(){
 
 const texts = [
     "Electrical Contractor",
-    "Electrical Installer",
-    "Electrical Technician",
-    "Electrical Maintenance Specialist",
-    "AC and Lighting Systems Specialist",
-    "Networking and Power Systems Engineer"
 ]
 
-let speed  =50;
+let speed  =100;
 const textElements = document.querySelector(".typewriter-text");
 
 let textIndex = 0;
