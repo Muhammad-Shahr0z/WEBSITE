@@ -243,14 +243,14 @@ section{
 }
 
 @media (max-width:440px){
-    .main-container .image{
-        width: 50%;
-        height: 60%;
-        margin-bottom: 0px;
-    }
 
     .main-container .content{
         width: 80%;
+    }
+    .main-container {
+
+        justify-content: flex-start;
+       
     }
 
     .main-container button{
@@ -264,8 +264,8 @@ section{
         z-index: -1;
         width: 250px;
         height: 340px;
-        margin-bottom: 0px;
-        margin-top: 5px;
+        margin-bottom: 30px;
+        margin-top: 10px;
     }
 
     .content .typewriter{
