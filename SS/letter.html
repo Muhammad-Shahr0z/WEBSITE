@@ -78,7 +78,7 @@
             padding: 50px;
             border-radius: 20px;
             background-color: #000000c8;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 800;
         }
 
@@ -201,7 +201,8 @@
               <strong>National Bank of Pakistan</strong>
               <strong>Khairpur Branch</strong>
               <br>
-              <strong style="display:inline;">Received :</strong> <p id="amount" style="display: inline;">00</p>
+              <br>
+              <strong style="display:inline;font-size: 20px;">Received :</strong> <p id="amount" style="display: inline;font-size:20px;">00</p>
              
                 <!-- Write your letter content here -->
             </div>
@@ -214,7 +215,7 @@
     </div>
 
     <!-- Print Button -->
-    <button class="print-button" onclick="window.print()" id="Printbtn" style="display: none;">Print</button>
+    <button class="print-button" onclick="window.print()">Print</button>
 
     <script>
       
@@ -223,7 +224,6 @@
         let DetailForm = document.getElementById('detailForm')
         let getDates = document.getElementById('getDate').value
         let getAmount = document.getElementById('getAmounts').value
-        let printButton = document.getElementById('Printbtn')
 
 
      
@@ -234,14 +234,11 @@
 
     if(getAmount == "" && getDates == ""){
 
-
       alert("Please Enter Date Or Amount First")
   
     }else{
       ShowLetter.style.display = "block"
       DetailForm.style.display = "none"
-      printButton.style.display ="block"
-      
   
   // form input for
 let Amount = document.getElementById('amount');
