@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SS Engineering Letterhead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome for icons (online) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,11 +23,12 @@
         }
 
         .letterhead-container {
-            width: 80%;
+            width:85%;
             margin: 30px auto;
             padding: 30px;
-            border: 5px double #077b32;
-            background-image: url('/3433329.jpg');
+            border: 2px solid #00000038;
+            border-radius: 25px;
+            background-image: url('/redbg.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -33,15 +37,16 @@
 
         .letterhead-header {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: center;
-            padding: 10px;
+            padding: 5px;
             border-bottom: 2px solid #fcfcfc;
         }
 
         .logo-placeholder {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
             background-color: #f4f4f4;
             color: #fff;
             display: flex;
@@ -54,47 +59,67 @@
 
         .contact-info {
             text-align: right;
-            color: #fff; /* Changed to white */
+            color: #000000; /* Changed to white */
             line-height: 1.6;
-            background-color: rgba(0, 0, 0, 0.512);
+            background-color: rgba(253, 247, 247, 0.512);
+            width: fit-content;
             border-radius: 10px;
+            padding: 5px;
         
         }
 
         .contact-info p {
-            margin: 5px 0;
-            text-align: center;
-            padding: 0px 10px 0px 10px;
+            margin: 0px 0;
+            text-align: start;
+            padding: 0px 10px 0px 5px;
+            font-size: 1rem;
+
         }
 
         .letterhead-body {
             padding: 40px 20px;
             min-height: 500px;
+    
         }
 
         .writing-area {
-            box-shadow: 5px 6px 6px rgb(1, 18, 13);
+          word-wrap: break-word; /* Forces text to wrap within the div */
+          overflow-wrap: break-word; 
+            box-shadow: 5px 6px 6px rgba(1, 18, 13, 0.533);
             min-height: 400px;
-            padding: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             border-radius: 20px;
-            background-color: #000000c8;
-            font-size: 1.5rem;
-            font-weight: 800;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: black;
+            background-image: url('/watermark.jpeg');
+    background-size: cover; /* Adjusts the image size */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-blend-mode: lighten; /* Lightens the background image */
+    background-color: rgba(255, 255, 255, 0.9); /* Adds a light overlay */
+
+
         }
 
         .letterhead-footer {
             text-align: center;
             padding: 10px;
-            border-top: 2px solid #077b32;
-            color: #077b32;
-            font-size: 14px;
+            border-top: 2px solid #00000074;
+            color: #000000;
+            font-size: .8rem;
+            font-weight: 600;
+            background-color: #ffffff6a;
         }
 
         .print-button {
             display: block;
             margin: 20px auto;
             padding: 10px 30px;
-            background-color: #077b32;
+            background-color: #000000;
             color: #fff;
             border: none;
             cursor: pointer;
@@ -118,10 +143,15 @@
             }
 
             .letterhead-container {
-                background-image: url('/3433329.jpg') !important;
+                background-image: url('/redbg.jpg') !important;
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+                margin: 0px;
+            }
+
+            .letterhead-container{
+              display: block;
             }
         }
 
@@ -143,6 +173,15 @@
           
       
           }
+      
+        }
+
+        @media(max-width:600px){
+          .contact-info{
+            text-align: center;
+            margin: auto;
+
+          }
         }
     </style>
 </head>
@@ -150,7 +189,7 @@
 
   <section style="display: flex; justify-content: center; align-items: center; height: 100vh;" id="detailForm">
     <div style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); width: 90%; max-width: 400px;">
-        <h2 style="text-align: center; color: #077b32; margin-bottom: 20px;">SS ENGINEERING</h2>
+        <h2 style="text-align: center; color: #077b32; margin-bottom: 20px;">Generate Your Letterhead</h2>
         
         <!-- Enter Date-->
         <label for="username" style="color: #077b32;">DATE:</label>
@@ -159,6 +198,11 @@
         <!-- Username Input -->
         <label for="username" style="color: #077b32;">AMOUNT:</label>
         <input type="text" id="getAmounts" name="username" placeholder="Enter your Amount"
+            style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #077b32; border-radius: 5px; box-sizing: border-box;">
+
+        <!-- Detail Input -->
+        <label for="username" style="color: #077b32;">Details:</label>
+        <input type="text" id="getDetails" name="username" placeholder="Enter Your Details"
             style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #077b32; border-radius: 5px; box-sizing: border-box;">
         
         <!-- Submit Button -->
@@ -174,85 +218,101 @@
 
 
 
-    <div class="letterhead-container" style="display: none;" id="ShowLetter">
+    <div class="letterhead-container"; id="ShowLetter" style="display: none;">
         <!-- Header Section -->
         <div class="letterhead-header">
-            <div class="logo-placeholder"><img src="/picture/sslogo.png" alt="logo" width="90px"></div>
-            <div class="contact-info">
-                <p><strong style="font-weight: 900; background-color: #055a25;border-radius:5px;padding:8px">SS Engineering</strong></p>
-                <p><i class="fas fa-phone"></i> 03432569886, 03002889991</p>
-                <p><i class="fas fa-envelope"></i> shoaibsalam4@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Malir Liaquat Market G.54</p>
-                <p><i class="fas fa-globe"></i> SSEngineering.vercel.app</p>
-            </div>
-           
-        </div>
 
-  
-        <!-- Body Section -->
-        <div class="letterhead-body">
+<div class="titleName" style="display: flex;color: #000000;justify-content: space-around ; align-items: center; flex-direction: column;font-size: 1rem;">
+
+  <strong style="font-weight: 700; font-size: larger;font-family: Roboto Slab;">Engineering Network</strong>
+  <p style="margin: 0;color: red; font-weight: 400;font-family: Roboto Slab;">SS Electric</p>
+
+</div>
+
+
+            <div class="logo-placeholder"><img src="/picture/sslogo.png" alt="logo" width="100px"></div>
+
+          </div>
+          
+          
+          <!-- Body Section -->
+          <div class="letterhead-body">
+            
             <div class="writing-area">
+              <strong style="color: black;font-size: 1.2rem;font-weight: 900;">Date : </strong><p id="date" style="display:inline"></p>
 
         
               
-           <strong>Date : </strong><p id="date" style="display:inline;"></p>
+      
 
               <hr>
-              <strong>National Bank of Pakistan</strong>
-              <strong>Khairpur Branch</strong>
+              <strong id="detail"></strong>
+           
               <br>
               <br>
-              <strong style="display:inline;font-size: 20px;">Received :</strong> <p id="amount" style="display: inline;font-size:20px;">00</p>
+              <strong style="display:inline;font-size: 20px;">Received :</strong> <p id="amount" style="display: inline;font-size:20px;"></p>
              
                 <!-- Write your letter content here -->
             </div>
+
+     
         </div>
 
         <!-- Footer Section -->
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> 03432569886, 03002889991</p>
+          <p><i class="fas fa-envelope"></i> shoaibsalam4@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Malir Liaquat Market G.54</p>
+          <p><i class="fas fa-globe"></i> SSEngineering.vercel.app</p>
+      </div>
         <div class="letterhead-footer">
-            <p>All Electrical Works | Wiring Point | Power Supply | DBs Installation | Networking | AC Wiring | Lights Installation |Camera Wiring</p>
+            <p>All Electrical Works | Wiring Point | Power Supply | DBs Installation | Network Wiring | AC Wiring | Lights Installation |Camera Wiring</p>
         </div>
+     
     </div>
 
     <!-- Print Button -->
-    <button class="print-button" onclick="window.print()">Print</button>
+    <button id="FinalPrintbtn" class="print-button" onclick="hideButton()" style="display: none;">Print</button>
 
     <script>
+      let FinalPrintbutton = document.getElementById
+        ('FinalPrintbtn')
+      const hideButton=()=>{
+        FinalPrintbutton.style.display = "none"
+      window.print()
+    }
+
       
       
       function Letterhead(){
+        FinalPrintbutton.style.display = "block"
         let DetailForm = document.getElementById('detailForm')
         let getDates = document.getElementById('getDate').value
         let getAmount = document.getElementById('getAmounts').value
 
-
-     
-      console.log(getAmount);
-      console.log(getDates);
-        
+       let getDetails =document.getElementById('getDetails').value
 
 
-    if(getAmount == "" && getDates == ""){
-
-      alert("Please Enter Date Or Amount First")
-  
-    }else{
+    if(getAmount !== "" && getDates !== ""){
       ShowLetter.style.display = "block"
       DetailForm.style.display = "none"
   
   // form input for
 let Amount = document.getElementById('amount');
 let Dates = document.getElementById('date');
+let detailEdit =document.getElementById('detail')
 
 Amount.innerHTML = getAmount
 Dates.innerHTML = getDates
+detailEdit.innerHTML = getDetails
+      
+    }else{
+      
+      alert("Please Enter Date Or Amount First")
     }
 
-
-
-
-
 }
+
 
     </script>
 </body>
